@@ -25,5 +25,4 @@ javadoc
 target
 build.xml
 .DS_Store
-.idea/misc.xml
-.gitignore
+

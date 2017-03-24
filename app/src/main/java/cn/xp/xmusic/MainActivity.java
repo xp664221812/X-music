@@ -7,11 +7,15 @@ import android.view.View;
 import android.view.Window;
 
 import com.jude.beam.bijection.BeamAppCompatActivity;
+import com.jude.beam.bijection.RequiresPresenter;
 
+@RequiresPresenter(MainPresenter.class)
 public class MainActivity extends BeamAppCompatActivity {
+
     private DrawerLayout mDrawerLayout;
     boolean drawerOpened = false;
     private Toolbar mToolBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +27,10 @@ public class MainActivity extends BeamAppCompatActivity {
 
 
         mToolBar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolBar != null) {
+            mToolBar.setTitle("");
+        }
         setSupportActionBar(mToolBar);
-
     }
 
 
